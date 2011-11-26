@@ -73,7 +73,8 @@ gem 'rack-ssl', :require => false
 
 gem 'state_machine', "0.10.4"
 
-gem "xapian-ruby", '1.2.7.1'
+#gem "xapian-ruby", '1.2.7.1'
+gem  "xapian-full"
 gem "xapit", :git => "git://github.com/dcu/xapit.git"
 
 group :deploy do
@@ -89,14 +90,14 @@ group :scripts do
 end
 
 group :test do
-  gem 'capybara'
-  gem "capybara-webkit"
-  gem 'launchy'
-  gem 'machinist_mongo', :require => 'machinist/mongoid'
-  gem 'ffaker'
-  gem 'simplecov'
-  gem "autotest"
-  gem 'ruby-debug19', '0.11.6', :require => 'ruby-debug'
+  #gem 'capybara'
+  #gem "capybara-webkit"
+  #gem 'launchy'
+  #gem 'machinist_mongo', :require => 'machinist/mongoid'
+  #gem 'ffaker'
+  #gem 'simplecov'
+  #gem "autotest"
+  #gem 'ruby-debug19', '0.11.6', :require => 'ruby-debug'
 end
 
 group :development do
