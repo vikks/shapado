@@ -17,46 +17,46 @@ if RUBY_PLATFORM !~ /mswin|mingw/
 else
   gem "maruku", "0.6.0"
 end
-gem "maruku"
+gem "maruku" # A pure-Ruby Markdown-superset interpreter
 # ui
-gem "haml"
-gem "sass"
-gem 'compass', '0.11.1'
-gem "compass-colors", "0.9.0"
-gem "fancy-buttons", "1.1.1"
-gem 'kaminari'
+gem "haml" #HTML Abstraction Markup Language - A Markup Haiku.
+gem "sass" #Sass (Syntactically Awesome Stylesheets) is a stylesheet language
+gem 'compass', '0.11.1' # Compass is a Stylesheet Authoring Environment that makes your website design simpler to implement and easier to maintain
+gem "compass-colors", "0.9.0" #compass-colors - Color Tools and Theme Support for Compass and Sass.
+gem "fancy-buttons", "1.1.1" #fancy-buttons - Fancy CSS Buttons using Compass
+gem 'kaminari' #A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Rails 3.
 
 # mongodb
-gem 'bson', '1.4.0'
-gem 'bson_ext', '1.4.0'
+gem 'bson', '1.4.0' #Independent BSON codec for Python that doesn't depend on MongoDB.
+gem 'bson_ext', '1.4.0' #C extensions for performance boost
 
-gem 'mongo', '1.4.0'
-gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git', :branch => "2.3.0-stable"
-gem 'mongoid_ext', :git => "git://github.com/dcu/mongoid_ext.git"
+gem 'mongo', '1.4.0' #mongo database 
+gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git', :branch => "2.3.0-stable" #Ruby ODM framework for MongoDB
+gem 'mongoid_ext', :git => "git://github.com/dcu/mongoid_ext.git" #Mongoid Plugins
 
-gem 'mongo_store', :git => 'https://github.com/Houdini/mongo_store.git'
+gem 'mongo_store', :git => 'https://github.com/Houdini/mongo_store.git' #Rack session store in MongoDB.
 
 # utils
 
-gem 'jammit'
-gem "whatlanguage", "1.0.0"
-gem "uuidtools", "~> 2.1.1"
-gem "magent", "0.6.2"
-gem "bug_hunter", :git => "git://github.com/ricodigo/bug_hunter.git"
+gem 'jammit' #Industrial Strength Asset Packaging for Rails.
+gem "whatlanguage", "1.0.0" #A language detection library for Ruby that uses bloom filters for speed
+gem "uuidtools", "~> 2.1.1" #- A simple universally unique ID generation library
+gem "magent", "0.6.2" # simple job queue system based on mongodb. 
+gem "bug_hunter", :git => "git://github.com/ricodigo/bug_hunter.git" #mountable app to track exceptions built on sinatra.
 
-gem 'goalie', '~> 0.0.4'
-gem 'dynamic_form'
-gem 'rinku', '~> 1.2.2', :require => 'rails_rinku'
+gem 'goalie', '~> 0.0.4' #Custom error pages for Rails 
+gem 'dynamic_form' #Helpers to deal with your model backed forms in Rails3
+gem 'rinku', '~> 1.2.2', :require => 'rails_rinku'  #Autolinking. Ruby. Yes, that's pretty much it
 
-gem "rack-recaptcha", "0.2.2", :require => "rack/recaptcha"
+gem "rack-recaptcha", "0.2.2", :require => "rack/recaptcha" # Rack Middleware for CAPTCHA verification via Recaptcha API.
 
-gem "twitter-text", "1.1.8"
-gem "twitter_oauth"
-gem 'social_widgets', :git => 'https://git.gitorious.org/social_widgets/social_widgets.git'
-gem 'activemerchant', '1.16.0'
-gem 'pdfkit', :git => 'git://github.com/jdpace/PDFKit.git' # apt-get install wkhtmltopdf
+gem "twitter-text", "1.1.8" #Twitter text processing library (auto linking and extraction of usernames, lists and hashtags)
+gem "twitter_oauth" #Twitter OAuth REST API client library for Ruby
+gem 'social_widgets', :git => 'https://git.gitorious.org/social_widgets/social_widgets.git' #display widgets of social networks
+gem 'activemerchant', '1.16.0' #Active Merchant is a simple payment abstraction library used in and sponsored by Shopify
+gem 'pdfkit', :git => 'git://github.com/jdpace/PDFKit.git' ##--- apt-get install wkhtmltopdf---##HTML+CSS to PDF using wkhtmltopdf
 
-gem 'geoip'
+gem 'geoip' # The Ruby gem for querying Maxmind.com's GeoIP database, which returns the geographic location of a server given its IP address
 
 # authentication
 gem 'omniauth', '~> 0.3.0'
