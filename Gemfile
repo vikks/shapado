@@ -59,34 +59,34 @@ gem 'pdfkit', :git => 'git://github.com/jdpace/PDFKit.git' ##--- apt-get install
 gem 'geoip' # The Ruby gem for querying Maxmind.com's GeoIP database, which returns the geographic location of a server given its IP address
 
 # authentication
-gem 'omniauth', '~> 0.3.0'
-gem 'oa-openid', '~> 0.3.0', :require => 'omniauth/openid'
-gem "oa-oauth", '~> 0.3.0', :require => "omniauth/oauth"
+gem 'omniauth', '~> 0.3.0' #OmniAuth is a flexible authentication system utilizing Rack middleware
+gem 'oa-openid', '~> 0.3.0', :require => 'omniauth/openid' #OpenID strategies for OmniAuth.
+gem "oa-oauth", '~> 0.3.0', :require => "omniauth/oauth" #OAuth strategies for OmniAuth..
 
-gem 'multiauth', :git => "http://github.com/dcu/multiauth.git"
+gem 'multiauth', :git => "http://github.com/dcu/multiauth.git" #multiauth - authentication for rails 3 based on omniauth
 
-gem 'orm_adapter'
-gem 'devise', "~> 1.4.0"
+gem 'orm_adapter' #orm_adapter - Provides a single point of entry for using basic features of ruby ORMs.
+gem 'devise', "~> 1.4.0" # Flexible authentication solution for Rails with Warden
 
-gem 'whenever', :require => false
-gem 'rack-ssl', :require => false
+gem 'whenever', :require => false #Cron jobs in Ruby
+gem 'rack-ssl', :require => false # Rack middleware to force SSL
 
-gem 'state_machine', "0.10.4"
+gem 'state_machine', "0.10.4" #Adds support for creating state machines for attributes on any Ruby class.
 
 #gem "xapian-ruby", '1.2.7.1'
-gem  "xapian-full"
-gem "xapit", :git => "git://github.com/dcu/xapit.git"
+gem  "xapian-full" #Ruby Xapian bindings, including xapian-core.
+gem "xapit", :git => "git://github.com/dcu/xapit.git" # High level Ruby library for interacting with Xapian, a full text search engine
 
 group :deploy do
-  gem 'capistrano', :require => false
+  gem 'capistrano', :require => false #Remote multi-server automation tool
   gem 'ricodigo-capistrano-recipes', "~> 0.1.3", :require => false
-  gem 'unicorn', '4.1.1', :require => false
-end
+  gem 'unicorn', '4.1.1', :require => false #Rack HTTP server for fast clients and Unix
+end 
 
 group :scripts do
-  gem 'eventmachine', '~> 0.12.10'
-  gem 'em-websocket', '~> 0.3.0'
-  gem 'twitter', '1.7.2'
+  gem 'eventmachine', '~> 0.12.10' #EventMachine: fast, simple event-processing library for Ruby programs.
+  gem 'em-websocket', '~> 0.3.0' #EventMachine based WebSocket server
+  gem 'twitter', '1.7.2' #- A Ruby wrapper for the Twitter REST and Search APIs
 end
 
 group :test do
@@ -101,16 +101,17 @@ group :test do
 end
 
 group :development do
-  gem "pry"
-  gem "database_cleaner"
-  gem "rspec", ">= 2.0.1"
-  gem "rspec-rails", ">= 2.0.1"
-  gem "remarkable_mongoid", ">= 0.5.0"
-  gem 'hpricot'
-  gem 'ruby_parser'
-  gem 'mongrel', '1.2.0.pre2'
-  gem 'niftier-generators', '0.1.2'
-  gem 'ruby-prof'
-  gem 'tunnlr_connector', :git => "git://github.com/dcu/tunnlr_connector.git", :branch => "patch-1", :require => "tunnlr"
-  gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
+  gem "pry" # an IRB alternative and runtime developer console
+  gem "database_cleaner" #Strategies for cleaning databases in Ruby. Can be used to ensure a clean state for testing.
+  gem "rspec", ">= 2.0.1"  #Behaviour Driven Development framework for Ruby.
+  gem "rspec-rails", ">= 2.0.1" 
+  gem "remarkable_mongoid", ">= 0.5.0" #Remarkable Matchers for Mongoid.
+  #gem 'hpricot' #- A swift, liberal HTML parser with a fantastic library.
+  gem 'why-hpricot' 
+  gem 'ruby_parser' #ruby_parser (RP) is a ruby parser written in pure ruby (utilizing racc--which does by default use a C extension)
+  gem 'mongrel', '1.2.0.pre2' #Simple Fast Mostly Ruby Web Server
+  gem 'niftier-generators', '0.1.2' # Modified version of Ryan Bates nifty-generators
+  gem 'ruby-prof' #ruby-prof is a fast code profiler for Ruby.
+  gem 'tunnlr_connector', :git => "git://github.com/dcu/tunnlr_connector.git", :branch => "patch-1", :require => "tunnlr"  #A plugin for interacting with tunnlr on both unix and windows. Uses the net::ssh gem.
+  gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'# Speed up slow Rails development mode
 end
